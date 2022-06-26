@@ -13,6 +13,8 @@ class ViewController: UIViewController {
     
     var wScreen: Double?
     var hScreen: Double?
+    var wGun: Double?
+    var hGun: Double?
     var position: CGPoint?
     var xPositionCurrent: CGFloat?
     var yPositionCurrent: CGFloat?
@@ -25,15 +27,14 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         wScreen = view.frame.width
         hScreen = view.frame.height
+        wGun = imgGun.frame.width
+        hGun = imgGun.frame.height
         speed = 3.0
         angle = 0.0
         xPositionCurrent = wScreen!/2
         yPositionCurrent = 0
         xPositionNew = wScreen!/2
         yPositionNew = 0
-        
-        print("w: \(wScreen!)")
-        print("h: \(hScreen!)")
     }
 
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -44,8 +45,14 @@ class ViewController: UIViewController {
     @IBAction func tapOnScreen(_ sender: Any) {
         xPositionNew = position?.x
         yPositionNew = position?.y
-        calculateRotate()
-        rotateImage(speed: 1, goc: angle!)
+        let limitY = hScreen! - hGun!
+        if yPositionNew! < limitY {
+            calculateRotate()
+            rotateImage(speed: 1, goc: angle!)
+        } else {
+            print("Cannot rotate")
+        }
+        
     }
     
     func rotateImage(speed: Double, goc: CGFloat){
