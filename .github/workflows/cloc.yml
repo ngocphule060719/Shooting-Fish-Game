@@ -23,6 +23,6 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v3
           
-      - name: Count Lines of Codes of AMF-Placer
-        uses: zslwyuan/cloc-badge-action@3.0
+      - name: Code Lines Badge
+        uses: Kherrisan/cloc-badge-action@1.0.1
 
