@@ -23,8 +23,8 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v3
 
-      - name: Code Lines Badge
-        uses: Kherrisan/cloc-badge-action@1.0.1
+      - name: Count Lines of Code (cloc)
+        uses: djdefi/cloc-action@4
         with:
           args: ${{ env.workspace }}
 
