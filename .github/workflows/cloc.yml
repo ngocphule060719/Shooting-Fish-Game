@@ -23,8 +23,8 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v3
 
-      - name: Execute scc.
+      - name: Counting.
         id: scc
-        uses: hdmsantander/scc-docker-action@3.0
+        uses: iryanbell/scc-docker-action@v1.0.2
         with:
-          args: ${{ env.workspace }} --ci -f json -o output.json -v
+          args: ${{ env.workspace }} -v --ci
