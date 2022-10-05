@@ -22,9 +22,7 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v3
-      
-      - name: Get the lines of code.
-        id: scc
-        uses: iryanbell/scc-docker-action@v1.0.2
-        with:
-          args: ${{ env.workspace }} -M [.g.dart,.freezed.dart] -f csv --by-file https://github.com/ngocphule060719/Shooting-Fish-Game/blob/main/output.csv
+          
+      - name: Count Lines of Codes of AMF-Placer
+        uses: zslwyuan/cloc-badge-action@3.0
+
