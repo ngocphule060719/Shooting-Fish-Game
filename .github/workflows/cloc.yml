@@ -25,7 +25,6 @@ jobs:
 
       - name: Count Lines of Code (cloc)
         uses: djdefi/cloc-action@4
-        with:
-          args: ${{ env.workspace }}
+        
 
 
