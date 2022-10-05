@@ -27,4 +27,4 @@ jobs:
         id: scc
         uses: iryanbell/scc-docker-action@v1.0.2
         with:
-          args: ${{ env.workspace }} -M [.g.dart,.freezed.dart] --scc redis
+          args: ${{ env.workspace }} -M [.g.dart,.freezed.dart]
