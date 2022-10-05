@@ -23,4 +23,5 @@ jobs:
       
       # Using https://github.com/AlDanial/cloc to count lines of code
       - name: Count Lines of Code (cloc)
-        uses: djdefi/cloc-action@4 --exclude-ext=.g.dart
+        uses: djdefi/cloc-action@4
+        
