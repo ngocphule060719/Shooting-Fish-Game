@@ -25,3 +25,8 @@ jobs:
       - name: Count Lines of Code (cloc)
         uses: djdefi/cloc-action@4
         
+      # Using https://github.com/Kherrisan/cloc-badge-action to count lines of code
+      - name: Count Lines of Codes of AMF-Placer
+        uses: zslwyuan/cloc-badge-action@3.0
+
+        
