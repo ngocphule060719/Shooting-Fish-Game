@@ -27,4 +27,4 @@ jobs:
         id: scc
         uses: iryanbell/scc-docker-action@v1.0.2
         with:
-          args: ${{ env.workspace }} -v --gen -f csv -o output.csv
+          args: ${{ env.workspace }} -f csv -o output.csv -v --gen
