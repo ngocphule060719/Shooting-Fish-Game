@@ -26,12 +26,5 @@ jobs:
       # Using https://github.com/AlDanial/cloc to count lines of code
       - name: Count Lines of Code (cloc)
         uses: djdefi/cloc-action@4
-      
-      - name: Get the lines of code.
-        id: scc
-        uses: iryanbell/scc-docker-action@v1.0.2
         with:
-          args: ${{ env.workspace }} -M [.g.dart,.freezed.dart]
-          
-
-        
+          args: ${{ env.workspace }} --exclude-ext=.g.dart
