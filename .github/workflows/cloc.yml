@@ -16,6 +16,8 @@ jobs:
     # The type of runner that the job will run on
     runs-on: ubuntu-latest
 
+    name: A job to count the lines of code.
+    
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
@@ -24,9 +26,12 @@ jobs:
       # Using https://github.com/AlDanial/cloc to count lines of code
       - name: Count Lines of Code (cloc)
         uses: djdefi/cloc-action@4
-
-      # https://github.com/marketplace/actions/scc-docker-action
-      - name: scc-docker-action
-        uses: iRyanBell/scc-docker-action@v1.0.0
+      
+      - name: Get the lines of code.
+        id: scc
+        uses: iryanbell/scc-docker-action@v1.0.2
+        with:
+          args: ${{ env.workspace }} -x .g.dart,.freezed.dart
+          
 
         
