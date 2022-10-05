@@ -27,4 +27,4 @@ jobs:
         id: scc
         uses: hdmsantander/scc-docker-action@3.0
         with:
-          args: ${{ env.workspace }} src --ci -f json -o scc.json
+          args: ${{ env.workspace }} --ci -f json -o scc.json
