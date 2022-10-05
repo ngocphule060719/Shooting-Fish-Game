@@ -27,7 +27,3 @@ jobs:
 
       - name: Count Lines of Code (cloc)
         uses: djdefi/cloc-action@4
-        
-      - name: Code Lines Badge
-        uses: Kherrisan/cloc-badge-action@1.0.1
-
